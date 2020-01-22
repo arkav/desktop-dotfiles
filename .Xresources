@@ -1,0 +1,9 @@
+#define fnt Fira Code Retina
+#define fnt_sz 10
+! Setup color scheme
+#include ".config/x/themes/dracula"
+#include ".config/x/colors"
+! URxvt setup
+#include ".config/x/urxvt"
+#include ".config/x/rofi"
+! URxvt*font: xft:Fira Code Retina:pixelsize=10:antialias=true

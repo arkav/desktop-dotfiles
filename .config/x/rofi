@@ -1,0 +1,2 @@
+rofi.color-window: bg, fg, fg
+rofi.color-normal: bg, fg, bg, mag

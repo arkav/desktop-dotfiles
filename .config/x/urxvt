@@ -1,0 +1,10 @@
+URxvt*underlineColor: ylw
+URxvt*highlightColor: blu
+
+URxtv*background:    ylw
+URxtv*foreground:    wht
+
+URxvt*cursorBlink: 1
+URxvt*scrollBar: false
+
+URxvt*font: xft:Fira Code Retina:pixelsize=10:antialias=true
