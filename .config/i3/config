@@ -13,20 +13,18 @@
 new_window pixel 2
 
 # Set inner/outer gaps
-gaps inner 10
-gaps outer 15
-
-# setup compton
-exec --no-startup-id compton
+gaps inner 7
+gaps outer 7
 
 # set wallpaper 
-exec --no-startup-id feh --bg-scale ~/.config/walls/$(cat ~/.config/wall)
-
+#exec --no-startup-id feh --bg-scale ~/.config/walls/$(cat ~/.config/wall)
+exec --no-startup-id ~/.fehbg
 # start notification daemon
-exec --no-startup-id dunst
+#exec --no-startup-id dunst
 
-# make full screen
-#exec --no-startup-id sh ~/.config/fullscreen.sh
+# start polybar
+exec --no-startup-id polybar top
+
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -58,11 +56,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# start a terminal retaining current directory
+bindsym $mod+Return exec urxvt -cd "`xcwd`"
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# show power options
+bindsym $mod+Shift+p exec sh ~/.config/power-opts.sh
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -194,13 +195,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-	status_command i3status
-	colors {
-		background #282a36
-		statusline #f8f8f2	
-	}
-}

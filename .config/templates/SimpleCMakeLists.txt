@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
+project(Polygon)
+
+file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cc )
+file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/src/*.hh )
+message(${HEADER_FILES})
+message(${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
+
+set(LIBS GL glfw)
+target_link_libraries(${PROJECT_NAME} ${LIBS})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build)

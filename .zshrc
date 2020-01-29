@@ -10,6 +10,7 @@ zstyle :compinstall filename '/home/arkav/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
 # Prompt
 PS1='[%F{blue}%n%f:%F{yellow}%~%f] $'
 ## Quick aliases
@@ -21,9 +22,11 @@ alias xrl="xrdb ~/.Xresources"
 alias zshrl="source ~/.zshrc"
 alias i3rl="i3-msg reload"
 # wallpaper stuff
-alias lswall="exa ~/.config/walls"
-wallpaper () {
-	feh --bg-scale ~/.config/walls/$1
-	echo $1 > ~/.config/wall
-	dunstify "Changed wallpaper to ~/.config/walls/$1"
+setwall () {
+	echo "Press 1 to set selected image as current wallpaper."
+	feh -. --action1 ';feh --bg-scale ~/.config/walls/%n && dunstify "Set wallpaper to %n" -i ~/.config/walls/%n' ~/.config/walls/*
+}
+
+ccnew () {
+	
 }
