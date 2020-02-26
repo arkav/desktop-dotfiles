@@ -12,6 +12,8 @@
 # Disable window titlebars
 new_window pixel 2
 
+# set floating for OpenGL projects
+for_window [title="Polygon"] floating enable
 # Set inner/outer gaps
 gaps inner 7
 gaps outer 7
@@ -167,7 +169,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # rofi
 
-bindsym $mod+Shift+Return exec rofi -show drun
+bindsym $mod+Shift+Return exec rofi -modi drun -show drun -show-icons
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

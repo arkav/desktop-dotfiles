@@ -1,5 +1,5 @@
 URxvt*underlineColor: ylw
-URxvt*highlightColor: blu
+URxvt*highlightColor: blk
 
 URxtv*background:    ylw
 URxtv*foreground:    wht
