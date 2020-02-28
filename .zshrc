@@ -25,6 +25,8 @@ alias ls=exa
 alias xrl="xrdb ~/.Xresources"
 alias zshrl="source ~/.zshrc"
 alias i3rl="i3-msg reload"
+# set editor to vim
+export EDITOR=vim
 # wallpaper stuff
 setwall() {
 	echo "Press 1 to set selected image as current wallpaper."

@@ -6,4 +6,3 @@
 ! URxvt setup
 #include ".config/x/urxvt"
 #include ".config/x/rofi"
-! URxvt*font: xft:Fira Code Retina:pixelsize=10:antialias=true
