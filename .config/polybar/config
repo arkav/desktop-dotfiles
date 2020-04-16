@@ -87,7 +87,8 @@ label-disconnected-underline = #c5c5c5
 
 [module/clock]
 type = internal/date
-date = %m-%d %H:%M%%{T-}
+date = %m-%d %I:%M%p%{T-}
+date-alt = %A, %B %d, %I:%M%p
 
 format-underline = #ff63a5
 
